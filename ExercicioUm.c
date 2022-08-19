@@ -23,7 +23,7 @@
 	
 */
 
-void replace_vogais(char string[MAX]){
+void TrocandoVogais(char string[MAX]){
 	for(int i = 0; i < MAX; ++i)
 		switch(string[i]){
 		case 'a':
@@ -44,11 +44,6 @@ void replace_vogais(char string[MAX]){
 		}
 }
 
-void new_string(char string[MAX]){
-	printf("\n%s\n",string);
-}
-
-
 main() {
 
 	char string[MAX];
@@ -59,7 +54,7 @@ main() {
 	
 	printf("\nInsira uma frase de no máximo 100 caracteres\n");
 	fgets(string,MAX+1,stdin);
-	new_string(string);
-	replace_vogais(string);
-	new_string(string);
+	printf("\nSua String Atual >>> %s\n",string);
+	TrocandoVogais(string);
+	printf("\nSua String Alterada >>> %s\n",string);
 }
